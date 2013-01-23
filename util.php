@@ -143,6 +143,7 @@ function getLocalPhoto($remoteUrl)
 
 	// If any of this process fails for any reason, just use the Flickr URL directly
 	$useUrl = $remoteUrl;
+	// Edit this!	
 	$convertedUrl = "http://www.utata.org/berg/images/converted/$filename";
 
 	if (file_exists($converted) && filesize($converted) > 0)
