@@ -1,0 +1,7 @@
+<?php
+
+// Edit this file and rename it to apikey.php
+
+global $flickrApiKey;
+
+$flickrApiKey = 'put_your_api_key_here';

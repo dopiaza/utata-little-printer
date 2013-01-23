@@ -1,0 +1,10 @@
+{
+  "owner_email": "operations@utata.org",
+  "publication_api_version": "1.0",
+  "name": "Utata: Tribal Photography",
+  "description": "Original photography and writing from <a href='http://www.utata.org/'>utata.org</a>, delivered every weekday.",
+  "delivered_on": "every weekday",
+  "external_configuration": false,
+  "send_timezone_info": false,
+  "send_delivery_count": false
+}
