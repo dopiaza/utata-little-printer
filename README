@@ -1,7 +1,9 @@
 Utata on Little Printer
 =======================
 
-Utata on Little Printer is an example of extracting content from a Wordpress database and generating a Little Printer publication from it. This code isn't meant to be used as-is (it's rather specific to Utata), but it demonstrates how to publish Wordpress content, and also retrieve photos from Flickr and processing them for publication. It should be very easy to modify to allow publication of your own content from Wordpress.
+Utata on Little Printer is an example of extracting content from a Wordpress database and generating a Little Printer publication from it. This code isn't meant to be used as-is (it's rather specific to Utata), but it demonstrates how to publish Wordpress content, and also retrieve photos from Flickr and processing them for publication. 
+
+This code is exactly the code used on utata.org. Consider it a starting point - it should be very easy to modify to allow publication of your own content from Wordpress.
 
 This code is Copyright (c) 2012 David Wilkinson and is distributed under the MIT licence. 
 The Utata logo is Copyright Utata and may not be used without permission.
@@ -13,11 +15,12 @@ Utata publishes original writing and photography every weekday at http://www.uta
 This Little Printer publication takes the latest post from the Wordpress blog, and formats it for Little Printer. It also uses the Flickr API to retrieve the URL of the Flickr photo and details of the photographer, and includes those in the publication.
 
 One of the trickiest things about publishing this kind of material to Little Printer is making sure that arbitrary photos will render well. I've found that I get better result by converting the photo to greyscale and resizing to the correct size first, rather than letting BERG cloud do all the conversion automatically. This code uses ImageMagick to perform that processing. 
-
+	
 To get the Flickr integration up and running, you'll need to get an API key from Flickr and edit and rename the apikey.sample.php file to apikey.php. Each Wordpress post should have a custom field called 'photoId', which contains the Flickr ID of the photo (that's the long number you see at the end of the Flickr URL for the photo page). This code uses my DPZFlickr library. It's already included here, but you can find the latest version at https://github.com/dopiaza/DPZFlickr.
 
 Modify sample.php and edition.php to use the correct blog id by modifying the switch_to_blog(2) line (or delete the line if you have a single site blog).
 
+There are a few URLs and directory paths dotted around, you'll need to edit things a little to suit your own setup. With hindsight, I guess I should have moved more things into a config file. Ah well. That bit is left as an exercise for the reader.
 
 You'll also need to update your server config to map  /sample/ and /edition/ onto sample.php and edition.php respectively. There are various ways to do this, I have the following in my server config:
 
