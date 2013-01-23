@@ -22,7 +22,7 @@
 
 	header
 	{
-		position: relative;
+		position: relative;	
 		text-align: center;
 	}
 
@@ -101,6 +101,7 @@
 <article>
 	<div class="separator"></div>
 	<header>
+		<!-- Alway use absolute URLs for images wherever possible. BERG will love you. -->
 		<img id="logo" src="http://www.utata.org/berg/utata_logo.png">
 	</header>
 	<div id="photo">
